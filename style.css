@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Global Style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+/* reset code to 0 */
+.row {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 32px;
+}
+
+button {
+  cursor: pointer;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color:#ff4d30;
+  transition: 300ms ease;
+}
+.container {
+  padding: 80px;
+  width: 100%;
+  height: 100%;
+}
+.color__needed{
+  color: #ff4d30;
+}
+/* Navigation */
+nav {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  /* Check */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+.nav__img {
+  width: 160px;
+}
+.nav__links {
+  display: flex;
+  gap: 15px;
+}
+.nav__link {
+  color: #010103;
+  font-weight: 600;
+  transition: 300ms ease;
+  font-size: 16px;
+}
+.nav__btn {
+  font-weight: 600;
+  padding: 12px 24px;
+  background: #ff4d30;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+.login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav__links:hover {
+  color: #ff4d30;
+}
+/* header */
+.header__bg__img {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  top: 0;
+  
+}
+/*This makes the img background to the left */
+header {
+  background-color: #f8f8f8;
+  height: 100vh;
+}
+/* makes it full page and give background image color */
+.header__row {
+  display: flex;
+  position: relative;
+  padding: 36px;
+  align-items: center;
+}
+/* Adds padding to the header */
+.header__wrapper {
+  position: absolute;
+  margin-top: 56px;
+  z-index: 2;
+  right: 0;
+  width: 65%;
+ 
+}
+/* Make img and title side by side */
+.header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  z-index: 3;
+  margin-top: 56px;
+}
+/* gives space inbetween text and also doesn't overflow the page */
+.header__img {
+  width: 100%;
+  height: 100%;
+}
+/* make car over background img */
+.header__abovetitle {
+  font-size: 20px;
+  font-weight: 900;
+}
+.header__title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.3;
+  max-width: 500px;
+}
+
+.header__para {
+  color: #706f7b;
+}
+.header__btns {
+  display: flex;
+  gap: 16px;
+}
+.header__btn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 18px 30px;
+  font-weight: 500;
+}
+.book__ride {
+  background-color: #ff4d30;
+}
+.learn__more {
+  background-color: black;
+}
+/* Feature */
+.container {
+  padding: 80px;
+  flex-wrap: wrap;
+}
+.feature__row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+.feature__title {
+  display: flex;
+  justify-self: center;
+}
+
+.feature__items {
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
+  text-align: center;
+  padding: 0 36px;
+  margin-top: 36px;
+}
+.feature__item {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.feature__img {
+  width: 100%;
+  height: 100%;
+}
+.feature__title {
+  font-size: 42px;
+}
+.feature__abovetitle {
+  font-size: 26px;
+  font-weight: 700;
+}
+.feature__item__para {
+  font-size: 16px;
+  color: #706f7b;
+}
+.feature__item__title {
+  font-size: 24px;
+}
+/* banner */
+#banner {
+  background-color: #2d2d2d;
+}
+.banner__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 56px 20px;
+  gap: 12px;
+}
+.banner__title {
+  font-size: 54px;
+}
+.banner__text {
+  color: white;
+}
+.banner__para {
+  font-size: 24px;
+}
+/* choose us */
+#choose-us {
+  background-image: url("https://car-rental-html-css.vercel.app/assets/choose-bg.png");
+  background-repeat: no-repeat;
+  background-position: -50px 200px;
+  background-size: cover;
+}
+
+.both-choose-us {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.choose__us__text {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  gap: 12px;
+}
+.choose-us-abovetitle {
+  font-size: 20px;
+}
+.choose-us-title {
+  font-size: 42px;
+}
+.choose-us-para {
+  color: #706f7b;
+}
+.choose-us-feature-img-wrapper {
+  width: 100%;
+}
+.choose-us-img {
+  width: 100%;
+  height: 100%;
+}
+.choose-us-feature {
+  display: flex;
+  gap: 12px;
+}
+.choose-us-features {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.choose-us-btn {
+  color: white;
+  background-color: #ff4d30;
+  height: 50px;
+  width: 150px;
+  border: none;
+  font-weight: 700;
+}
+/* Testimonial */
+#testimonial {
+  background-color: #f8f8f8;
+}
+.testimonial__row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 16px;
+}
+.testimonial__para {
+  max-width: 700px;
+  color: #706f7b;
+  margin-top: 16px;
+}
+.testimonial__abovetitle {
+  font-size: 22px;
+}
+.testimonial__title {
+  font-size: 42px;
+}
+.testimonial__cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 100px;
+}
+.testimonial__card {
+  display: flex;
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  flex-direction: column;
+  padding: 56px;
+  gap: 40px;
+  box-shadow: 0 20px 40px 0 rgba(255, 77, 48, 1);
+}
+.testimonial__img {
+  width: 70px;
+  border-radius: 9999px;
+}
+.testimonial__card__info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.testimonial__profile {
+  text-align: start;
+}
+.testimonial__quote {
+  margin-left: auto;
+  font-size: 48px;
+  color: #ff4d30;
+}
+.testimonial__card__para {
+  font-size: 22px;
+  text-align: left;
+}
+/* download */
+.download__elements {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  gap: 22px;
+}
+.download__title {
+  font-size: 36px;
+}
+#download {
+  background-image: url(https://car-rental-html-css.vercel.app/assets/download-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.download__para {
+  color: #706f7b;
+}
+/* Footer */
+
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: space-between;
+}
+.company__info{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.car__rental__info{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.working__time__info {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 16px;
+}
+.working__hours{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.sub__info{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.car__title{
+  font-size: 24px;
+}
+.car__para{
+  color: #706f7b;
+}
+.company__title{
+  font-size: 24px;
+}
+.working__title{
+  font-size: 24px;
+}
+.subscription__title{
+  font-size: 25px;
+}
+.sub__btn{
+  height: 46px;
+  background-color: #ff4d30;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  border: none;
+  border-radius: 4px;
+}
+.sub__email{
+  height: 40px;
+  background-color: #ececec;
+  border: none;
+  color: white;
+  padding: 0 16px;
+}
