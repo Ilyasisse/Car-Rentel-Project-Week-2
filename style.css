@@ -549,9 +549,20 @@ header {
     text-align: center;
     align-items: center;
   }
+  /* Subscription */
+  .sub__email
+  {
+    width: 100%;
+  }
+  .sub__btn{
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
+  .container{
+    padding: 0;
+  }
   /* header */
   .header__btns {
     flex-direction: column;
@@ -571,6 +582,9 @@ header {
   .testimonial__info__icon {
     display: none;
   }
+  .testimonial__abovetitle{
+    margin-top: 15px;
+  }
   /* download */
   .download__text__links {
     flex-direction: column;
@@ -579,5 +593,8 @@ header {
   }
   .download__text__link {
     width: 100%;
+  }
+  .download__elements{
+    margin-top: 32px;
   }
 }
