@@ -19,12 +19,13 @@
 button {
   cursor: pointer;
 }
+
 a {
   color: black;
   text-decoration: none;
 }
 a:hover {
-  color:#ff4d30;
+  color: #ff4d30;
   transition: 300ms ease;
 }
 .container {
@@ -32,7 +33,7 @@ a:hover {
   width: 100%;
   height: 100%;
 }
-.color__needed{
+.color__needed {
   color: #ff4d30;
 }
 /* Navigation */
@@ -80,13 +81,60 @@ nav {
 .nav__links:hover {
   color: #ff4d30;
 }
+/* Menu */
+.nav__menu {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  background-color: #f8f8f8;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms ease;
+}
+.open .menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__close {
+  position: absolute;
+  top: 44px;
+  right: 32px;
+  border: none;
+  background-color: transparent;
+  font-size: 32px;
+}
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.menu__link {
+  font-size: 24px;
+}
+
 /* header */
 .header__bg__img {
   position: absolute;
   right: 0;
   z-index: 1;
   top: 0;
-  
 }
 /*This makes the img background to the left */
 header {
@@ -107,7 +155,6 @@ header {
   z-index: 2;
   right: 0;
   width: 65%;
- 
 }
 /* Make img and title side by side */
 .header__text {
@@ -185,10 +232,14 @@ header {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: center;
 }
 .feature__img {
   width: 100%;
   height: 100%;
+}
+.feature__wrapper__img {
+  width: 172px;
 }
 .feature__title {
   font-size: 42px;
@@ -229,7 +280,7 @@ header {
 #choose-us {
   background-image: url("https://car-rental-html-css.vercel.app/assets/choose-bg.png");
   background-repeat: no-repeat;
-  background-position: -50px 200px;
+  background-position: -50px 250px;
   background-size: cover;
 }
 
@@ -364,52 +415,36 @@ header {
   gap: 48px;
   justify-content: space-between;
 }
-.company__info{
+.all__info {
   width: 20%;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.car__rental__info{
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.working__time__info {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  gap: 16px;
-}
-.working__hours{
+
+.working__hours {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
-.sub__info{
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.car__title{
+
+.car__title {
   font-size: 24px;
 }
-.car__para{
+.car__para {
   color: #706f7b;
 }
-.company__title{
+.company__title {
   font-size: 24px;
 }
-.working__title{
+.working__title {
   font-size: 24px;
 }
-.subscription__title{
+.subscription__title {
   font-size: 25px;
 }
-.sub__btn{
+.sub__btn {
   height: 46px;
   background-color: #ff4d30;
   color: white;
@@ -418,10 +453,140 @@ header {
   border: none;
   border-radius: 4px;
 }
-.sub__email{
+.sub__email {
   height: 40px;
   background-color: #ececec;
   border: none;
   color: white;
   padding: 0 16px;
+}
+
+/* Extra Large Screen */
+@media (max-width: 1280px) {
+  /* Footer */
+
+  .footer__row {
+    gap: 48px;
+  }
+  .all__info {
+    width: 40%;
+  }
+}
+/* Nav */
+
+@media (max-width: 1024px) {
+  .login,
+  .nav__links {
+    display: none;
+  }
+  .nav__menu {
+    display: block;
+  }
+  .feature__items {
+    flex-wrap: wrap;
+  }
+  .both-choose-us {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 48px;
+  }
+  .choose__us__text {
+    align-items: center;
+  }
+
+  .testimonial__cards {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+/* TABLET */
+@media (max-width: 768px) {
+  /* Header */
+  .header__bg__img,
+  .header__img {
+    display: none;
+  }
+  .header__row {
+    justify-content: center;
+  }
+  .header__text {
+    text-align: center;
+    align-items: center;
+  }
+  /* Feature */
+  .feature__item {
+    width: 100%;
+    align-items: center;
+  }
+  .feature__title {
+    font-size: 22px;
+  }
+  .feature__items {
+    gap: 32px;
+  }
+  /* Choose-us */
+  #choose-us {
+    background-position: -50px -10px;
+  }
+  .choose-us-features {
+    align-items: center;
+    text-align: center;
+  }
+  /* Download */
+  #download {
+    background-image: none;
+  }
+  .download__row {
+    display: flex;
+    text-align: center;
+  }
+}
+@media(max-width: 680px){
+  .all__info{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 480px) {
+  /* header */
+  .header__btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  /* features */
+  .feature__items {
+    margin-top: 0;
+  }
+  /* choose */
+  .choose-us-feature {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  /* testimonials */
+  .testimonial__info__icon {
+    display: none;
+  }
+  /* download */
+  .download__text__links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .download__text__link {
+    width: 100%;
+  }
 }
