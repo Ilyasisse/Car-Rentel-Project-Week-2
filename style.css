@@ -543,24 +543,15 @@ header {
     text-align: center;
   }
 }
-@media(max-width: 680px){
-  .all__info{
+@media (max-width: 680px) {
+  .all__info {
     width: 100%;
     text-align: center;
     align-items: center;
   }
 }
 
-
-
-
-
-
-
-
-
-
-@media(max-width: 480px) {
+@media (max-width: 480px) {
   /* header */
   .header__btns {
     flex-direction: column;
